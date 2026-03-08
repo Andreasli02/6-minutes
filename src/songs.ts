@@ -217,11 +217,6 @@ export const songs: Song[] = [
     "artist": "The Chainsmokers, Halsey"
   },
   {
-    "id": "1qE47wUKG2juJwPoLqg4C9",
-    "name": "Lean On (feat. MØ & DJ Snake)",
-    "artist": "Major Lazer, MØ, DJ Snake"
-  },
-  {
     "id": "0TVV2gFROJaB3kIZyCUvIY",
     "name": "Rather Be (feat. Jess Glynne)",
     "artist": "Clean Bandit, Jess Glynne"
@@ -987,11 +982,6 @@ export const songs: Song[] = [
     "artist": "Veronica Maggio"
   },
   {
-    "id": "1RHgbZQytMxKYDUtNlhkWy",
-    "name": "Ølbriller (feat. Byz)",
-    "artist": "Erik Og Kriss, Byz"
-  },
-  {
     "id": "0xcl9XT60Siji6CSG4y6nb",
     "name": "Club Can't Handle Me (feat. David Guetta) - From the Step Up 3D Soundtrack",
     "artist": "Flo Rida"
@@ -1100,16 +1090,6 @@ export const songs: Song[] = [
     "id": "5YEP3SdvomClpSpWaMUHW4",
     "name": "Wavin' Flag",
     "artist": "K'NAAN"
-  },
-  {
-    "id": "1xt6clFYoktQfOVAr6VIwf",
-    "name": "Bumpy Ride - Radio Edit",
-    "artist": "Mohombi"
-  },
-  {
-    "id": "0jkv1p10VsGWc5MLGutHty",
-    "name": "Dynamite - Radio Edit",
-    "artist": "Taio Cruz"
   },
   {
     "id": "2Xnwq90ABLHqm0rOM04GJ9",
@@ -1490,11 +1470,6 @@ export const songs: Song[] = [
     "id": "4aMT5LHe8A2uIc11H8Cx2m",
     "name": "Conga",
     "artist": "Gloria Estefan, Miami Sound Machine"
-  },
-  {
-    "id": "7N3PAbqfTjSEU1edb2tY8j",
-    "name": "Jump - 2015 Remaster",
-    "artist": "Van Halen"
   },
   {
     "id": "7723JnKU2R15Iv4T7OJrly",
@@ -1997,11 +1972,6 @@ export const songs: Song[] = [
     "artist": "Toploader"
   },
   {
-    "id": "0utLWSIbolqT7KyppMuxKY",
-    "name": "Yeah! (feat. Lil Jon & Ludacris)",
-    "artist": "USHER, Lil Jon, Ludacris"
-  },
-  {
     "id": "3gg7McoPL4SSCMiwWkFyXL",
     "name": "Give Me Everything (feat. Ne-Yo, Afrojack & Nayer)",
     "artist": "Pitbull, Ne-Yo, AFROJACK, Nayer"
@@ -2220,11 +2190,6 @@ export const songs: Song[] = [
     "id": "7nAJz8lfy2wtkPOBROSATs",
     "name": "The Nights",
     "artist": "Avicii"
-  },
-  {
-    "id": "63CSozvYUEudPp12679UVF",
-    "name": "Don't Worry (with Ray Dalton) - Radio Edit",
-    "artist": "Madcon, Ray Dalton"
   },
   {
     "id": "6fmbKY1teQRfsIqVRlnTsM",
