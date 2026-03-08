@@ -10,10 +10,14 @@ export interface Round {
 
 export interface QuizState {
   phase: QuizPhase;
-  rounds: Round[];
+  allSongs: Song[];       // shuffled pool of remaining songs
+  rounds: Round[];         // completed + current rounds
   currentRound: number;
-  score: number;
+  lives: number;           // starts at 3, lose one per wrong answer
+  score: number;           // correct guesses
 }
+
+const MAX_LIVES = 3;
 
 /** Fisher-Yates shuffle (returns new array) */
 function shuffle<T>(arr: T[]): T[] {
@@ -26,11 +30,14 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 export function initQuiz(songs: Song[]): QuizState {
-  const picked = shuffle(songs).slice(0, 3);
+  const shuffled = shuffle(songs);
+  const firstSong = shuffled[0];
   return {
     phase: 'start',
-    rounds: picked.map((song) => ({ song, guessId: null, isCorrect: null })),
+    allSongs: shuffled.slice(1),
+    rounds: [{ song: firstSong, guessId: null, isCorrect: null }],
     currentRound: 0,
+    lives: MAX_LIVES,
     score: 0,
   };
 }
@@ -44,18 +51,27 @@ export function submitGuess(state: QuizState, songId: string): QuizState {
   const isCorrect = songId === round.song.id;
   const newRounds = [...state.rounds];
   newRounds[state.currentRound] = { ...round, guessId: songId, isCorrect };
+  const newLives = isCorrect ? state.lives : state.lives - 1;
   return {
     ...state,
     phase: 'answered',
     rounds: newRounds,
+    lives: newLives,
     score: state.score + (isCorrect ? 1 : 0),
   };
 }
 
 export function nextRound(state: QuizState): QuizState {
-  const next = state.currentRound + 1;
-  if (next >= state.rounds.length) {
+  // Game over if no lives left or no songs remaining
+  if (state.lives <= 0 || state.allSongs.length === 0) {
     return { ...state, phase: 'results' };
   }
-  return { ...state, phase: 'playing', currentRound: next };
+  const nextSong = state.allSongs[0];
+  return {
+    ...state,
+    phase: 'playing',
+    currentRound: state.currentRound + 1,
+    allSongs: state.allSongs.slice(1),
+    rounds: [...state.rounds, { song: nextSong, guessId: null, isCorrect: null }],
+  };
 }

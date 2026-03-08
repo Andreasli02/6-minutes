@@ -10,20 +10,16 @@ const sortedSongs = [...songs].sort((a, b) =>
   `${a.artist} - ${a.name}`.localeCompare(`${b.artist} - ${b.name}`)
 );
 
+function livesDisplay(lives: number): string {
+  return '<span class="hearts">' + '&#9829;'.repeat(lives) + '<span class="hearts-lost">' + '&#9829;'.repeat(3 - lives) + '</span></span>';
+}
+
 function render() {
   switch (state.phase) {
-    case 'start':
-      renderStart();
-      break;
-    case 'playing':
-      renderPlaying();
-      break;
-    case 'answered':
-      renderAnswered();
-      break;
-    case 'results':
-      renderResults();
-      break;
+    case 'start': renderStart(); break;
+    case 'playing': renderPlaying(); break;
+    case 'answered': renderAnswered(); break;
+    case 'results': renderResults(); break;
   }
 }
 
@@ -31,7 +27,7 @@ function renderStart() {
   app.innerHTML = `
     <div class="card">
       <h1>6 Minutes Song Quiz</h1>
-      <p class="subtitle">Listen to the clip and guess the song.<br>3 rounds. How well do you know your music?</p>
+      <p class="subtitle">Listen to the clip and guess the song.<br>You have 3 lives — keep going until you're out!</p>
       <button class="btn-primary" id="start-btn">Start Quiz</button>
     </div>
   `;
@@ -47,7 +43,10 @@ function renderPlaying() {
 
   app.innerHTML = `
     <div class="card">
-      <div class="round-label">Round ${state.currentRound + 1} of 3</div>
+      <div class="status-bar">
+        <span class="round-label">Round ${state.currentRound + 1}</span>
+        <span class="lives-display">${livesDisplay(state.lives)}</span>
+      </div>
       <div class="embed-container" id="embed-container">
         <iframe
           id="spotify-embed"
@@ -83,11 +82,14 @@ function renderPlaying() {
 function renderAnswered() {
   const round = state.rounds[state.currentRound];
   const guessedSong = songs.find((s) => s.id === round.guessId);
-  const isLast = state.currentRound >= state.rounds.length - 1;
+  const gameOver = !round.isCorrect && state.lives <= 0;
 
   app.innerHTML = `
     <div class="card">
-      <div class="round-label">Round ${state.currentRound + 1} of 3</div>
+      <div class="status-bar">
+        <span class="round-label">Round ${state.currentRound + 1}</span>
+        <span class="lives-display">${livesDisplay(state.lives)}</span>
+      </div>
       <div class="feedback ${round.isCorrect ? 'correct' : 'incorrect'}">
         ${round.isCorrect ? 'Correct!' : 'Wrong!'}
       </div>
@@ -98,9 +100,9 @@ function renderAnswered() {
              Correct answer: <strong>${round.song.artist} - ${round.song.name}</strong>`
         }
       </p>
-      <p class="score-display">Score: ${state.score}/${state.currentRound + 1}</p>
+      <p class="score-display">Score: ${state.score}</p>
       <div class="buttons">
-        <button class="btn-primary" id="next-btn">${isLast ? 'See Results' : 'Next Round'}</button>
+        <button class="btn-primary" id="next-btn">${gameOver ? 'See Results' : 'Next Round'}</button>
       </div>
     </div>
   `;
@@ -112,11 +114,13 @@ function renderAnswered() {
 }
 
 function renderResults() {
+  const totalRounds = state.rounds.length;
+
   app.innerHTML = `
     <div class="card">
-      <div class="round-label">Final Results</div>
-      <div class="results-score">${state.score}/3</div>
-      <p class="results-label">${getResultMessage(state.score)}</p>
+      <div class="round-label">Game Over</div>
+      <div class="results-score">${state.score}</div>
+      <p class="results-label">${state.score === totalRounds ? 'Flawless! You never missed!' : `You got ${state.score} out of ${totalRounds} right.`}</p>
       <div class="breakdown">
         ${state.rounds.map((round) => `
           <div class="breakdown-item">
@@ -137,13 +141,6 @@ function renderResults() {
     state = startQuiz(state);
     render();
   });
-}
-
-function getResultMessage(score: number): string {
-  if (score === 3) return 'Perfect score! You really know your music!';
-  if (score === 2) return 'Great job! Almost perfect!';
-  if (score === 1) return 'Not bad, keep listening!';
-  return 'Better luck next time!';
 }
 
 // Initialize

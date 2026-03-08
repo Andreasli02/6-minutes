@@ -38,13 +38,32 @@ h1 {
   font-size: 0.95rem;
 }
 
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
 .round-label {
   color: #1DB954;
   font-weight: 600;
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  margin-bottom: 1.25rem;
+}
+
+.lives-display {
+  font-size: 1.1rem;
+}
+
+.hearts {
+  color: #e74c3c;
+  letter-spacing: 0.15em;
+}
+
+.hearts-lost {
+  color: #444;
 }
 
 /* Spotify embed container — only shows play controls, hides track info */
