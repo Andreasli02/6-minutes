@@ -55,26 +55,66 @@ function renderPlaying() {
           loading="eager"
         ></iframe>
       </div>
-      <select id="guess-select">
-        <option value="">Choose a song...</option>
-        ${sortedSongs.map((s) => `<option value="${s.id}">${s.artist} - ${s.name}</option>`).join('')}
-      </select>
+      <div class="autocomplete">
+        <input type="text" id="guess-input" placeholder="Start typing a song or artist..." autocomplete="off" />
+        <ul id="suggestions" class="suggestions"></ul>
+      </div>
       <div class="buttons">
         <button class="btn-primary" id="submit-btn" disabled>Submit Guess</button>
       </div>
     </div>
   `;
 
-  const select = document.getElementById('guess-select') as HTMLSelectElement;
+  const input = document.getElementById('guess-input') as HTMLInputElement;
+  const suggestionsList = document.getElementById('suggestions') as HTMLUListElement;
   const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement;
+  let selectedId: string | null = null;
 
-  select.addEventListener('change', () => {
-    submitBtn.disabled = !select.value;
+  function updateSuggestions() {
+    const query = input.value.toLowerCase();
+    selectedId = null;
+    submitBtn.disabled = true;
+
+    if (!query) {
+      suggestionsList.innerHTML = '';
+      return;
+    }
+
+    const matches = sortedSongs.filter((s) =>
+      `${s.artist} - ${s.name}`.toLowerCase().includes(query)
+    ).slice(0, 8);
+
+    suggestionsList.innerHTML = matches.map((s) =>
+      `<li data-id="${s.id}">${s.artist} - ${s.name}</li>`
+    ).join('');
+  }
+
+  input.addEventListener('input', updateSuggestions);
+
+  suggestionsList.addEventListener('click', (e) => {
+    const li = (e.target as HTMLElement).closest('li');
+    if (!li) return;
+    selectedId = li.dataset.id!;
+    input.value = li.textContent!;
+    suggestionsList.innerHTML = '';
+    submitBtn.disabled = false;
+  });
+
+  // Hide suggestions when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!(e.target as HTMLElement).closest('.autocomplete')) {
+      suggestionsList.innerHTML = '';
+    }
+  });
+
+  // Re-show on focus if there's text
+  input.addEventListener('focus', () => {
+    if (input.value) updateSuggestions();
   });
 
   submitBtn.addEventListener('click', () => {
-    if (!select.value) return;
-    state = submitGuess(state, select.value);
+    if (!selectedId) return;
+    state = submitGuess(state, selectedId);
     render();
   });
 }
