@@ -2,8 +2,25 @@ import { songs } from './songs';
 import { type QuizState, initQuiz, startQuiz, submitGuess, nextRound } from './quiz';
 import './style.css';
 
+declare global {
+  interface Window {
+    onSpotifyIframeApiReady: (IFrameAPI: any) => void;
+  }
+}
+
 const app = document.getElementById('app')!;
 let state: QuizState;
+let spotifyAPI: any = null;
+let currentController: any = null;
+
+// Capture the Spotify IFrame API when it's ready
+if ((window as any).SpotifyIframeApi) {
+  spotifyAPI = (window as any).SpotifyIframeApi;
+} else {
+  window.onSpotifyIframeApiReady = (IFrameAPI: any) => {
+    spotifyAPI = IFrameAPI;
+  };
+}
 
 // Sort songs alphabetically for dropdown
 const sortedSongs = [...songs].sort((a, b) =>
@@ -47,13 +64,10 @@ function renderPlaying() {
         <span class="round-label">Round ${state.currentRound + 1}</span>
         <span class="lives-display">${livesDisplay(state.lives)}</span>
       </div>
+      <div class="timer-bar"><div class="timer-fill" id="timer-fill"></div></div>
+      <div class="timer-label" id="timer-label">0:30</div>
       <div class="embed-container" id="embed-container">
-        <iframe
-          id="spotify-embed"
-          src="https://open.spotify.com/embed/track/${trackId}?utm_source=generator&theme=0"
-          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-          loading="eager"
-        ></iframe>
+        <div id="spotify-embed"></div>
       </div>
       <div class="autocomplete">
         <input type="text" id="guess-input" placeholder="Start typing a song or artist..." autocomplete="off" />
@@ -64,6 +78,19 @@ function renderPlaying() {
       </div>
     </div>
   `;
+
+  // Create Spotify embed via IFrame API and autoplay
+  const embedElement = document.getElementById('spotify-embed')!;
+  if (spotifyAPI) {
+    spotifyAPI.createController(embedElement, {
+      uri: `spotify:track:${trackId}`,
+      height: 152,
+      width: '100%',
+    }, (controller: any) => {
+      currentController = controller;
+      controller.play();
+    });
+  }
 
   const input = document.getElementById('guess-input') as HTMLInputElement;
   const suggestionsList = document.getElementById('suggestions') as HTMLUListElement;
@@ -114,9 +141,40 @@ function renderPlaying() {
 
   submitBtn.addEventListener('click', () => {
     if (!selectedId) return;
+    clearInterval(timerId);
+    if (currentController) { currentController.destroy(); currentController = null; }
     state = submitGuess(state, selectedId);
     render();
   });
+
+  // 30-second countdown timer
+  const TIMER_SECONDS = 30;
+  let remaining = TIMER_SECONDS;
+  const timerFill = document.getElementById('timer-fill')!;
+  const timerLabel = document.getElementById('timer-label')!;
+
+  const timerId = setInterval(() => {
+    remaining--;
+    const pct = (remaining / TIMER_SECONDS) * 100;
+    timerFill.style.width = `${pct}%`;
+    if (remaining <= 10) timerFill.classList.add('timer-urgent');
+    const secs = remaining % 60;
+    timerLabel.textContent = `0:${secs.toString().padStart(2, '0')}`;
+
+    if (remaining <= 0) {
+      clearInterval(timerId);
+      // Destroy the controller to stop playback
+      if (currentController) { currentController.destroy(); currentController = null; }
+      const container = document.getElementById('embed-container');
+      if (container) { container.remove(); }
+      timerLabel.textContent = '';
+      const timeUp = document.createElement('div');
+      timeUp.className = 'time-up';
+      timeUp.textContent = "Time's up!";
+      timerLabel.after(timeUp);
+      timerLabel.textContent = '0:00';
+    }
+  }, 1000);
 }
 
 function renderAnswered() {
