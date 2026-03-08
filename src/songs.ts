@@ -152,19 +152,9 @@ export const songs: Song[] = [
     "artist": "Beyoncé, JAŸ-Z"
   },
   {
-    "id": "2k1np6GRFvKjgjYfo2g39B",
-    "name": "I Wanna Dance with Somebody (Who Loves Me)",
-    "artist": "Whitney Houston"
-  },
-  {
     "id": "7hQJA50XrCWABAu5v6QZ4i",
     "name": "Don't Stop Me Now - Remastered 2011",
     "artist": "Queen"
-  },
-  {
-    "id": "0eqH0ALoDQevq59YcQ53KE",
-    "name": "Hollaback Girl",
-    "artist": "Gwen Stefani"
   },
   {
     "id": "09ISyLOPeuno7kKlzdbZuq",
@@ -692,11 +682,6 @@ export const songs: Song[] = [
     "artist": "Katy Perry"
   },
   {
-    "id": "6UaRii9AH6Zss9xNMEQ2M9",
-    "name": "Love The Way You Lie",
-    "artist": "Eminem, Rihanna"
-  },
-  {
     "id": "441ERAG5YrbD6rPwaAXnvV",
     "name": "On Top Of The World",
     "artist": "Imagine Dragons"
@@ -972,11 +957,6 @@ export const songs: Song[] = [
     "artist": "Laleh"
   },
   {
-    "id": "3ehrxAhYms24KLPG8FZe0W",
-    "name": "We Are Young (feat. Janelle Monáe)",
-    "artist": "fun., Janelle Monáe"
-  },
-  {
     "id": "5IWmU2PNimgYuTLddU2DRo",
     "name": "Payphone",
     "artist": "Maroon 5, Wiz Khalifa"
@@ -1062,11 +1042,6 @@ export const songs: Song[] = [
     "artist": "Avicii"
   },
   {
-    "id": "1CNJyTUh56oj3OCZOZ5way",
-    "name": "Party Rock Anthem",
-    "artist": "LMFAO, Lauren Bennett, GoonRock"
-  },
-  {
     "id": "70Vdd1gx5tn84jkAU31ASv",
     "name": "Sexy And I Know It",
     "artist": "LMFAO"
@@ -1085,11 +1060,6 @@ export const songs: Song[] = [
     "id": "69yVxyuRahEzs2taFMVVoO",
     "name": "Empire State Of Mind [Jay-Z + Alicia Keys]",
     "artist": "JAŸ-Z"
-  },
-  {
-    "id": "1UHBcngfWo8hi3m003wZtX",
-    "name": "Not Afraid",
-    "artist": "Eminem"
   },
   {
     "id": "0R7YVi7w41Dr9jU5vblAok",
@@ -1147,11 +1117,6 @@ export const songs: Song[] = [
     "artist": "USHER, Pitbull"
   },
   {
-    "id": "6Y4NlwjQRVhxSUbMGwOM8z",
-    "name": "Hey, Soul Sister",
-    "artist": "Train"
-  },
-  {
     "id": "3elVSWMtB79KNXgDOZyFgo",
     "name": "Replay",
     "artist": "Iyaz"
@@ -1164,11 +1129,6 @@ export const songs: Song[] = [
   {
     "id": "5RzFJd6W40SDTyZkX6xx45",
     "name": "I Know You Want Me (Calle Ocho)",
-    "artist": "Pitbull"
-  },
-  {
-    "id": "32yIEFS62uS5ryhr2Xlooj",
-    "name": "Hotel Room Service",
     "artist": "Pitbull"
   },
   {
@@ -1242,11 +1202,6 @@ export const songs: Song[] = [
     "artist": "David Guetta, Flo Rida, Nicki Minaj"
   },
   {
-    "id": "6jAsmDJI8iPhGWtS27kZ67",
-    "name": "Only Girl (In The World)",
-    "artist": "Rihanna"
-  },
-  {
     "id": "0aBKFfdyOD1Ttvgv0cfjjJ",
     "name": "More - RedOne Jimmy Joker Remix",
     "artist": "USHER"
@@ -1290,11 +1245,6 @@ export const songs: Song[] = [
     "id": "0z4UEolsjCFGKB7BU9RCRi",
     "name": "Rosa helikopter",
     "artist": "Peaches"
-  },
-  {
-    "id": "1CmUZGtH29Kx36C1Hleqlz",
-    "name": "Thrift Shop (feat. Wanz)",
-    "artist": "Macklemore & Ryan Lewis, Macklemore, Ryan Lewis, Wanz"
   },
   {
     "id": "5pfJsMwoRYKampPay8amX0",
@@ -1517,11 +1467,6 @@ export const songs: Song[] = [
     "artist": "Michael Sembello"
   },
   {
-    "id": "5XsMz0YfEaHZE0MTb1aujs",
-    "name": "Wake Me Up Before You Go-Go",
-    "artist": "Wham!"
-  },
-  {
     "id": "0GONea6G2XdnHWjNZd6zt3",
     "name": "Summer Of '69",
     "artist": "Bryan Adams"
@@ -1545,11 +1490,6 @@ export const songs: Song[] = [
     "id": "4aMT5LHe8A2uIc11H8Cx2m",
     "name": "Conga",
     "artist": "Gloria Estefan, Miami Sound Machine"
-  },
-  {
-    "id": "2KH16WveTQWT6KOG9Rg6e2",
-    "name": "Eye of the Tiger",
-    "artist": "Survivor"
   },
   {
     "id": "7N3PAbqfTjSEU1edb2tY8j",
@@ -1665,11 +1605,6 @@ export const songs: Song[] = [
     "id": "3vkQ5DAB1qQMYO4Mr9zJN6",
     "name": "Gimme! Gimme! Gimme! (A Man After Midnight)",
     "artist": "ABBA"
-  },
-  {
-    "id": "3wpLkju0bJy89kjgdRys0j",
-    "name": "September",
-    "artist": "Earth, Wind & Fire"
   },
   {
     "id": "17OqI90oTFZ3J8PVu6j07V",
@@ -1907,11 +1842,6 @@ export const songs: Song[] = [
     "artist": "David Guetta, Kelly Rowland"
   },
   {
-    "id": "0CAfXk7DXMnon4gLudAp7J",
-    "name": "Low (feat. T-Pain)",
-    "artist": "Flo Rida, T-Pain"
-  },
-  {
     "id": "2V4bv1fNWfTcyRJKmej6Sj",
     "name": "Cooler Than Me - Single Mix",
     "artist": "Mike Posner, Gigamesh"
@@ -2052,19 +1982,9 @@ export const songs: Song[] = [
     "artist": "Kylie Minogue"
   },
   {
-    "id": "1peT7rhuRsVvJVSSd0iXXp",
-    "name": "Beautiful Girls",
-    "artist": "Sean Kingston"
-  },
-  {
     "id": "2SDx0PooHZI1SQKR0y44bs",
     "name": "Grace Kelly",
     "artist": "MIKA"
-  },
-  {
-    "id": "1mr3616BzLdhXfJmLmRsO8",
-    "name": "Fireflies",
-    "artist": "Owl City"
   },
   {
     "id": "6RjKVXi31fui9m4dbiGRrL",
@@ -2075,16 +1995,6 @@ export const songs: Song[] = [
     "id": "3Fzlg5r1IjhLk2qRw667od",
     "name": "Dancing in the Moonlight",
     "artist": "Toploader"
-  },
-  {
-    "id": "27oCP61LgIwhOGNN6sdOkV",
-    "name": "Hotel Room Service",
-    "artist": "Pitbull"
-  },
-  {
-    "id": "0vkLnZMWMmE3DDREbmEMeB",
-    "name": "Hips Don't Lie (feat. Wyclef Jean)",
-    "artist": "Shakira, Wyclef Jean"
   },
   {
     "id": "0utLWSIbolqT7KyppMuxKY",
@@ -2112,11 +2022,6 @@ export const songs: Song[] = [
     "artist": "Kings of Leon"
   },
   {
-    "id": "3xkxcbnc7G3XYuZt6eUnI5",
-    "name": "Empire State Of Mind",
-    "artist": "JAŸ-Z, Alicia Keys"
-  },
-  {
     "id": "4Ek7euLiYhyaIf3obNqacZ",
     "name": "Yeah 3x",
     "artist": "Chris Brown"
@@ -2140,11 +2045,6 @@ export const songs: Song[] = [
     "id": "6HHytHLXLX8QfWTtGfFSvH",
     "name": "Drop It Like It's Hot",
     "artist": "Snoop Dogg, Pharrell Williams"
-  },
-  {
-    "id": "2U8NXPTXZWG2O0ye2sYRiH",
-    "name": "I Love It (feat. Charli XCX)",
-    "artist": "Icona Pop, Charli xcx"
   },
   {
     "id": "0JAj0nOPH6dfdPyPBSKcGR",
@@ -2352,11 +2252,6 @@ export const songs: Song[] = [
     "artist": "Major Lazer, Nyla, Fuse ODG"
   },
   {
-    "id": "7jTTclESZDl303D4p7tN6M",
-    "name": "Runaway (U & I)",
-    "artist": "Galantis"
-  },
-  {
     "id": "6eE5LWw0DpIbTOdKwDUoE8",
     "name": "Secrets - Radio Edit",
     "artist": "Tiësto, KSHMR, VASSY"
@@ -2552,19 +2447,9 @@ export const songs: Song[] = [
     "artist": "The Kids"
   },
   {
-    "id": "573KncfqJnq8iytpmT9FZ8",
-    "name": "Dra Tilbake",
-    "artist": "Erik Og Kriss"
-  },
-  {
     "id": "0Gf6mZ2kMJCDVHm2afcpfl",
     "name": "Ring meg",
     "artist": "Gabrielle"
-  },
-  {
-    "id": "4YZ4KnqzYUgy5lKjT7rcpg",
-    "name": "Snakke Litt",
-    "artist": "Admiral P"
   },
   {
     "id": "28k5bDeysU73IRdyDXbses",
@@ -2697,11 +2582,6 @@ export const songs: Song[] = [
     "artist": "CLMD, Tungevaag"
   },
   {
-    "id": "6CZSePF4e6DJbraNkjgJ6d",
-    "name": "Wild Eyes",
-    "artist": "Broiler, RAVVEL"
-  },
-  {
     "id": "1thU1NIPh8ACsoMy9Wz5eV",
     "name": "Hvem Er Hun",
     "artist": "Arif Murakami"
@@ -2725,11 +2605,6 @@ export const songs: Song[] = [
     "id": "3E5IeN5MqUs16rjvMRlaT1",
     "name": "Alt For Norge",
     "artist": "Drillos"
-  },
-  {
-    "id": "6OnfBiiSc9RGKiBKKtZXgQ",
-    "name": "We Built This City",
-    "artist": "Starship"
   },
   {
     "id": "4PdJSsESm34djLfBde9Pr2",
@@ -2775,11 +2650,6 @@ export const songs: Song[] = [
     "id": "33IOhptvC2Qoy2UhjiHXLV",
     "name": "Flames",
     "artist": "David Guetta, Sia"
-  },
-  {
-    "id": "2kvgmr5CFhSvleQqTjB3eP",
-    "name": "Lush Life",
-    "artist": "Zara Larsson"
   },
   {
     "id": "5WvAo7DNuPRmk4APhdPzi8",
@@ -2865,11 +2735,6 @@ export const songs: Song[] = [
     "id": "7zyNuxKjvwPiN6mGNkWhvS",
     "name": "Kunsten å være inder",
     "artist": "Karpe"
-  },
-  {
-    "id": "0QtJxtBf6mSszHhF0yv3XY",
-    "name": "Radio",
-    "artist": "Cir.Cuz"
   },
   {
     "id": "63iNukhPZGnSFbBYLOVbPD",
@@ -3097,11 +2962,6 @@ export const songs: Song[] = [
     "artist": "Albert Kick, Jason Rene"
   },
   {
-    "id": "3o3ALDdKbyCT16fSmRJ0hC",
-    "name": "My My My",
-    "artist": "Promise Land, Skullwell"
-  },
-  {
     "id": "6ho0GyrWZN3mhi9zVRW7xi",
     "name": "Losing It",
     "artist": "FISHER"
@@ -3212,11 +3072,6 @@ export const songs: Song[] = [
     "artist": "Jonas Blue, JP Cooper"
   },
   {
-    "id": "3KkXRkHbMCARz0aVfEt68P",
-    "name": "Sunflower - Spider-Man: Into the Spider-Verse",
-    "artist": "Post Malone, Swae Lee"
-  },
-  {
     "id": "2dpaYNEQHiRxtZbfNsse99",
     "name": "Happier",
     "artist": "Marshmello, Bastille"
@@ -3317,21 +3172,6 @@ export const songs: Song[] = [
     "artist": "Tones And I"
   },
   {
-    "id": "7crMiinWx373rNBZBaVske",
-    "name": "Closer",
-    "artist": "The Chainsmokers, Halsey"
-  },
-  {
-    "id": "1NtIMM4N0cFa1dNzN15chl",
-    "name": "Believer",
-    "artist": "Imagine Dragons"
-  },
-  {
-    "id": "0s3nnoMeVWz3989MkNQiRf",
-    "name": "Lucid Dreams",
-    "artist": "Juice WRLD"
-  },
-  {
     "id": "3PfIrDoz19wz7qK7tYeu62",
     "name": "Don't Start Now",
     "artist": "Dua Lipa"
@@ -3347,19 +3187,9 @@ export const songs: Song[] = [
     "artist": "Post Malone"
   },
   {
-    "id": "4vS8VaBwJJV5Ry7UFIQuoo",
-    "name": "Lean On (feat. MØ & DJ Snake)",
-    "artist": "Major Lazer, MØ, DJ Snake"
-  },
-  {
     "id": "2xLMifQCjDGFmkHkpNLD9h",
     "name": "SICKO MODE",
     "artist": "Travis Scott"
-  },
-  {
-    "id": "09CtPGIpYB4BrO8qb1RGsF",
-    "name": "Sorry",
-    "artist": "Justin Bieber"
   },
   {
     "id": "7dt6x5M1jzdTEt8oCbisTK",
@@ -3367,24 +3197,9 @@ export const songs: Song[] = [
     "artist": "Post Malone"
   },
   {
-    "id": "0w75KG0DuLDi6tdHmEMovD",
-    "name": "Don't Let Me Down",
-    "artist": "The Chainsmokers, Daya"
-  },
-  {
     "id": "6UelLqGlWMcVH1E5c4H7lY",
     "name": "Watermelon Sugar",
     "artist": "Harry Styles"
-  },
-  {
-    "id": "7gHs73wELdeycvS48JfIos",
-    "name": "Faded",
-    "artist": "Alan Walker"
-  },
-  {
-    "id": "6GmUVqe73u5YRfUUynZK6I",
-    "name": "Let Her Go",
-    "artist": "Passenger"
   },
   {
     "id": "0lYBSQXN6rCTvUZvg9S0lU",
@@ -3402,19 +3217,9 @@ export const songs: Song[] = [
     "artist": "Ed Sheeran & Justin Bieber, Justin Bieber"
   },
   {
-    "id": "4QRZirU4s1f30iDHzuKncj",
-    "name": "Wake Me Up",
-    "artist": "Avicii"
-  },
-  {
     "id": "3e9HZxeyfWwjeyPAMmWSSQ",
     "name": "thank u, next",
     "artist": "Ariana Grande"
-  },
-  {
-    "id": "1fh2TfUOtOoXEE8qQynYEC",
-    "name": "Counting Stars",
-    "artist": "OneRepublic"
   },
   {
     "id": "3JvrhDOgAt6p7K8mDyZwRd",
@@ -3442,11 +3247,6 @@ export const songs: Song[] = [
     "artist": "Justin Timberlake"
   },
   {
-    "id": "7wqSzGeodspE3V6RBD5W8L",
-    "name": "See You Again (feat. Charlie Puth)",
-    "artist": "Wiz Khalifa, Charlie Puth"
-  },
-  {
     "id": "7ytR5pFWmSjzHJIeQkgog4",
     "name": "ROCKSTAR (feat. Roddy Ricch)",
     "artist": "DaBaby, Roddy Ricch"
@@ -3462,24 +3262,9 @@ export const songs: Song[] = [
     "artist": "Oasis"
   },
   {
-    "id": "7oK9VyNzrYvRFo7nQEYkWN",
-    "name": "Mr. Brightside",
-    "artist": "The Killers"
-  },
-  {
-    "id": "1EzrEOXmMH3G43AXT1y7pA",
-    "name": "I'm Yours",
-    "artist": "Jason Mraz"
-  },
-  {
     "id": "2iuZJX9X9P0GKaE93xcPjk",
     "name": "Sugar",
     "artist": "Maroon 5"
-  },
-  {
-    "id": "4B0JvthVoAAuygILe3n4Bs",
-    "name": "What Do You Mean?",
-    "artist": "Justin Bieber"
   },
   {
     "id": "7zsXy7vlHdItvUSH8EwQss",
@@ -3537,11 +3322,6 @@ export const songs: Song[] = [
     "artist": "DJ Khaled, Justin Bieber, Quavo, Chance the Rapper, Lil Wayne"
   },
   {
-    "id": "3ERa3mEeOnrh2Mc47qM6T1",
-    "name": "Halo",
-    "artist": "Beyoncé"
-  },
-  {
     "id": "40MkEbKzuSW9ET6HBngqnK",
     "name": "Light It Up (feat. Nyla & Fuse ODG) [Remix]",
     "artist": "Major Lazer, Nyla, Fuse ODG"
@@ -3567,11 +3347,6 @@ export const songs: Song[] = [
     "artist": "Jack Ü, Skrillex, Diplo, Justin Bieber"
   },
   {
-    "id": "1rIKgCH4H52lrvDcz50hS8",
-    "name": "Lush Life",
-    "artist": "Zara Larsson"
-  },
-  {
     "id": "0PDUDa38GO8lMxLCRc4lL1",
     "name": "PILLOWTALK",
     "artist": "ZAYN"
@@ -3582,11 +3357,6 @@ export const songs: Song[] = [
     "artist": "Ava Max"
   },
   {
-    "id": "3RkvscbM4aNbELiQf7PJwn",
-    "name": "Happy - From \"Despicable Me 2\"",
-    "artist": "Pharrell Williams"
-  },
-  {
     "id": "0puf9yIluy9W0vpMEUoAnN",
     "name": "Bang Bang",
     "artist": "Jessie J, Ariana Grande, Nicki Minaj"
@@ -3595,11 +3365,6 @@ export const songs: Song[] = [
     "id": "3gbBpTdY8lnQwqxNCcf795",
     "name": "Pompeii",
     "artist": "Bastille"
-  },
-  {
-    "id": "4kbj5MwxO1bq9wjT5g9HaA",
-    "name": "Shut Up and Dance",
-    "artist": "WALK THE MOON"
   },
   {
     "id": "0gb1J5UrTpzaU1s3nupgCd",
@@ -3642,11 +3407,6 @@ export const songs: Song[] = [
     "artist": "Robin Thicke, T.I., Pharrell Williams"
   },
   {
-    "id": "1qCdYQdkWvm4cYXAuOlbyc",
-    "name": "Locked out of Heaven",
-    "artist": "Bruno Mars"
-  },
-  {
     "id": "3XSczvk4MRteOw4Yx3lqMU",
     "name": "Roar",
     "artist": "Katy Perry"
@@ -3657,39 +3417,9 @@ export const songs: Song[] = [
     "artist": "Avicii"
   },
   {
-    "id": "2Zb7wnGUnNPCas2E0wWSQ5",
-    "name": "Ni**as In Paris",
-    "artist": "JAŸ-Z, Kanye West"
-  },
-  {
-    "id": "46lFttIf5hnUZMGvjK0Wxo",
-    "name": "Runaway (U & I)",
-    "artist": "Galantis"
-  },
-  {
-    "id": "0ct6r3EGTcMLPtrXHDvVjc",
-    "name": "The Nights",
-    "artist": "Avicii"
-  },
-  {
-    "id": "6ol4ZSifr7r3Lb2a9L5ZAB",
-    "name": "Call Me Maybe",
-    "artist": "Carly Rae Jepsen"
-  },
-  {
     "id": "67awxiNHNyjMXhVgsHuIrs",
     "name": "Turn Down for What",
     "artist": "DJ Snake, Lil Jon"
-  },
-  {
-    "id": "6KuHjfXHkfnIjdmcIvt9r0",
-    "name": "On Top Of The World",
-    "artist": "Imagine Dragons"
-  },
-  {
-    "id": "7w87IxuO7BDcJ3YUqCyMTT",
-    "name": "Pumped Up Kicks",
-    "artist": "Foster The People"
   },
   {
     "id": "5mCPDVBb16L4XQwDdbRUpz",
@@ -3702,19 +3432,9 @@ export const songs: Song[] = [
     "artist": "M83"
   },
   {
-    "id": "6C7RJEIUDqKkJRZVWdkfkH",
-    "name": "Stronger",
-    "artist": "Kanye West"
-  },
-  {
     "id": "6PUIzlqotEmPuBfjbwYWOB",
     "name": "Summertime Sadness (Lana Del Rey Vs. Cedric Gervais) - Cedric Gervais Remix",
     "artist": "Lana Del Rey, Cedric Gervais"
-  },
-  {
-    "id": "5QjJgPU8AJeickx34f7on6",
-    "name": "Levels - Radio Edit",
-    "artist": "Avicii"
   },
   {
     "id": "37jTPJgwCCmIGMPB45jrPV",
@@ -3752,16 +3472,6 @@ export const songs: Song[] = [
     "artist": "Travis Scott"
   },
   {
-    "id": "5Q0Nhxo0l2bP3pNjpGJwV1",
-    "name": "Party In The U.S.A.",
-    "artist": "Miley Cyrus"
-  },
-  {
-    "id": "57JVGBtBLCfHw2muk5416J",
-    "name": "Another One Bites The Dust - Remastered 2011",
-    "artist": "Queen"
-  },
-  {
     "id": "4SSnFejRGlZikf02HLewEF",
     "name": "bury a friend",
     "artist": "Billie Eilish"
@@ -3775,11 +3485,6 @@ export const songs: Song[] = [
     "id": "3eekarcy7kvN4yt5ZFzltW",
     "name": "HIGHEST IN THE ROOM",
     "artist": "Travis Scott"
-  },
-  {
-    "id": "2WfaOiMkCvy7F5fcp2zZ8L",
-    "name": "Take on Me",
-    "artist": "a-ha"
   },
   {
     "id": "08mG3Y1vljYA6bvDt4Wqkj",
@@ -3800,16 +3505,6 @@ export const songs: Song[] = [
     "id": "2bL2gyO6kBdLkNSkxXNh6x",
     "name": "Animals",
     "artist": "Maroon 5"
-  },
-  {
-    "id": "1fidCEsYlaVE3pHwKCvpFZ",
-    "name": "Am I Wrong",
-    "artist": "Nico & Vinz"
-  },
-  {
-    "id": "6CDzDgIUqeDY5g8ujExx2f",
-    "name": "Heat Waves",
-    "artist": "Glass Animals"
   },
   {
     "id": "7lPN2DXiMsVn7XUKtOW1CS",
@@ -3860,10 +3555,5 @@ export const songs: Song[] = [
     "id": "14AJI1RloVWTh8bJe9gBPM",
     "name": "Händerna mot himlen",
     "artist": "Petra Marklund"
-  },
-  {
-    "id": "005cocyIL36CVjjtUEdVSq",
-    "name": "En Solskinnsdag",
-    "artist": "Postgirobygget"
   }
 ];
