@@ -2,18 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Spotify Album Player</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6 Minutes Song Quiz</title>
 </head>
 <body>
-  <input id="playlistId" placeholder="Playlist ID" value="3k6Os3T678g6MNfcN5u3SX">
-  <button onclick="play()">Play</button>
-  <div id="player"></div>
-  <script>
-    function play() {
-      const id = document.getElementById('playlistId').value.trim();
-      document.getElementById('player').innerHTML =
-        `<iframe src="https://open.spotify.com/embed/playlist/${id}" width="400" height="352" frameborder="0" allow="encrypted-media"></iframe>`;
-    }
-  </script>
+  <div id="app"></div>
+  <script type="module" src="/src/main.ts"></script>
 </body>
 </html>

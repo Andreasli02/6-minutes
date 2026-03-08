@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node:*)",
+      "WebFetch(domain:developer.spotify.com)",
+      "WebFetch(domain:vite.dev)",
+      "Bash(npm install:*)",
+      "Bash(npx tsx:*)",
+      "WebFetch(domain:open.spotify.com)",
+      "Bash(npx vite:*)"
+    ]
+  }
+}
