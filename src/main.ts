@@ -66,6 +66,7 @@ function renderPlaying() {
       </div>
       <div class="timer-bar"><div class="timer-fill" id="timer-fill"></div></div>
       <div class="timer-label" id="timer-label">0:30</div>
+      <button class="pause-btn" id="pause-btn" title="Pause">&#9208;</button>
       <div class="embed-container" id="embed-container">
         <div id="spotify-embed"></div>
       </div>
@@ -150,10 +151,23 @@ function renderPlaying() {
   // 30-second countdown timer
   const TIMER_SECONDS = 30;
   let remaining = TIMER_SECONDS;
+  let timerPaused = false;
   const timerFill = document.getElementById('timer-fill')!;
   const timerLabel = document.getElementById('timer-label')!;
 
+  // Pause/resume button controls both timer and Spotify playback
+  const pauseBtn = document.getElementById('pause-btn')!;
+  pauseBtn.addEventListener('click', () => {
+    timerPaused = !timerPaused;
+    pauseBtn.innerHTML = timerPaused ? '&#9654;' : '&#9208;';
+    pauseBtn.title = timerPaused ? 'Play' : 'Pause';
+    if (currentController) {
+      timerPaused ? currentController.pause() : currentController.resume();
+    }
+  });
+
   const timerId = setInterval(() => {
+    if (timerPaused) return;
     remaining--;
     const pct = (remaining / TIMER_SECONDS) * 100;
     timerFill.style.width = `${pct}%`;

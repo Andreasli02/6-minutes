@@ -1047,11 +1047,6 @@ export const songs: Song[] = [
     "artist": "Foster The People"
   },
   {
-    "id": "69yVxyuRahEzs2taFMVVoO",
-    "name": "Empire State Of Mind [Jay-Z + Alicia Keys]",
-    "artist": "JAŸ-Z"
-  },
-  {
     "id": "0R7YVi7w41Dr9jU5vblAok",
     "name": "Sweat - Snoop Dogg vs David Guetta Remix",
     "artist": "Snoop Dogg, David Guetta"

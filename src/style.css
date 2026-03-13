@@ -102,24 +102,35 @@ h1 {
   padding: 1.5rem 0;
 }
 
-/* Spotify embed container — only shows play button */
+/* Spotify embed — hidden, only used for audio */
 .embed-container {
-  width: 48px;
-  height: 48px;
+  width: 0;
+  height: 0;
   overflow: hidden;
-  border-radius: 50%;
-  margin: 0 auto 1.25rem;
-  position: relative;
+  position: absolute;
+  pointer-events: none;
 }
 
-.embed-container iframe,
-.embed-container #spotify-embed iframe {
-  position: absolute;
-  top: -104px;
-  left: -250px;
-  width: 300px;
-  height: 152px;
+/* Custom play/pause button */
+.pause-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #1DB954;
+  color: #000;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+  padding: 0;
   border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.pause-btn:hover {
+  background: #1ed760;
 }
 
 .autocomplete {
